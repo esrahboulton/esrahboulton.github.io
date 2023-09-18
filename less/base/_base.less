@@ -1,0 +1,12 @@
+html {font-size: 16px;}
+body {
+	font-family: @body;
+	font-size: 16px;
+	font-weight: 400;
+	color:@text;
+	line-height:1.7em;
+}
+@media (prefers-color-scheme: dark) {
+	html {background: @text;}
+	body {color: @white;}
+}

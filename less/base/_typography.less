@@ -1,0 +1,56 @@
+a {
+	background-color: transparent;
+	color:@text;
+	position: relative;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: @link-color;
+	.transition(~"background-color 0.2s, color 0.2s" ease-in-out);
+	&:hover,
+	&:active {
+		color: @text;
+		outline: none;
+		text-decoration-thickness: 4px;
+	}
+	&:focus {
+		background: @link-hover;
+		border-color: @link-hover;
+		color: @text;
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+p {
+	width: 100%;
+	float: left;
+	display: block;
+	margin-bottom: 16px;
+}
+
+::selection {background: @link-hover;}
+::-moz-selection {background: @link-hover;}
+a::selection {
+	background: @link-color;
+	color:@white;
+}
+a::-moz-selection {
+	background: @link-color;
+	color:@white;
+}
+@media (prefers-color-scheme: dark) {
+	::selection {
+		background: @link-hover;
+		color: @text;
+	}
+	::-moz-selection {
+		background: @link-hover;
+		color: @text;
+	}
+	a {
+		color: @white;
+		&:hover,
+		&:active {color: @white;}
+		&:focus {color: @text;}
+	}
+}
