@@ -3,14 +3,14 @@ a {
 	color:@text;
 	position: relative;
 	text-decoration: underline;
-	text-decoration-thickness: 2px;
+	text-decoration-thickness: max(2px,0.25rem);
 	text-decoration-color: @link-color;
 	.transition(~"background-color 0.2s, color 0.2s" ease-in-out);
 	&:hover,
 	&:active {
 		color: @text;
 		outline: none;
-		text-decoration-thickness: 4px;
+		text-decoration-thickness: max(4px,0.35rem);
 	}
 	&:focus {
 		background: @link-hover;
@@ -22,10 +22,9 @@ a {
 }
 
 p {
-	width: 100%;
-	float: left;
 	display: block;
-	margin-bottom: 16px;
+	line-height: 2;
+	margin: 0 0 2rem 0;
 }
 
 ::selection {background: @link-hover;}
@@ -53,4 +52,33 @@ a::-moz-selection {
 		&:active {color: @white;}
 		&:focus {color: @text;}
 	}
+}
+
+h1, .h1 {
+	font-size: 3rem;
+	margin-bottom: 2rem;
+}
+h2, .h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+h3, .h3 {
+	font-size: 1.75rem;
+	margin-bottom: 2rem;
+}
+h4, .h4 {
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+}
+h5, .h5 {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+h6, .h6 {
+	font-size: 1.125rem;
+	margin-bottom: 2rem;
+}
+
+abbr {
+	cursor: help;
 }
