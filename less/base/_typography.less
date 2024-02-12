@@ -1,3 +1,11 @@
+*:focus {
+	background: @link-hover;
+	border-color: @link-hover;
+	color: @text;
+	outline: max(2px,0.25rem) solid @link-color;
+	outline-offset: 4px;
+}
+
 a {
 	background-color: transparent;
 	color:@text;
@@ -9,15 +17,7 @@ a {
 	&:hover,
 	&:active {
 		color: @text;
-		outline: none;
 		text-decoration-thickness: max(4px,0.35rem);
-	}
-	&:focus {
-		background: @link-hover;
-		border-color: @link-hover;
-		color: @text;
-		outline: none;
-		text-decoration: none;
 	}
 }
 
@@ -56,27 +56,33 @@ a::-moz-selection {
 
 h1, .h1 {
 	font-size: 3rem;
-	margin-bottom: 2rem;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
 }
 h2, .h2 {
 	font-size: 2rem;
-	margin-bottom: 2rem;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
 }
 h3, .h3 {
 	font-size: 1.75rem;
-	margin-bottom: 2rem;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
 }
 h4, .h4 {
 	font-size: 1.5rem;
-	margin-bottom: 2rem;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
 }
 h5, .h5 {
 	font-size: 1.25rem;
-	margin-bottom: 2rem;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
 }
 h6, .h6 {
 	font-size: 1.125rem;
-	margin-bottom: 2rem;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
 }
 
 abbr {
