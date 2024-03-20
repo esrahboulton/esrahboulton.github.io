@@ -9,34 +9,37 @@
   margin: 0;
 }
 html {
+  background-color: #ecf8ff;
   font-size: 16px;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #374358;
+  }
 }
 body {
   font-family: 'Merriweather', serif;
   font-size: 16px;
   font-weight: 400;
-  color: #262626;
+  color: #202b3a;
   line-height: 1.7em;
   margin: 0;
 }
 @media (prefers-color-scheme: dark) {
-  html {
-    background: #262626;
-  }
   body {
-    color: #fff;
+    color: #ecf8ff;
   }
 }
 *:focus {
   background: #FFDB09;
   border-color: #FFDB09;
-  color: #262626;
+  color: #202b3a;
   outline: max(2px, 0.25rem) solid #159BC8;
   outline-offset: 4px;
 }
 a {
   background-color: transparent;
-  color: #262626;
+  color: #202b3a;
   position: relative;
   text-decoration: underline;
   text-decoration-thickness: max(2px, 0.25rem);
@@ -46,7 +49,7 @@ a {
 }
 a:hover,
 a:active {
-  color: #262626;
+  color: #202b3a;
   text-decoration-thickness: max(4px, 0.35rem);
 }
 p {
@@ -65,38 +68,38 @@ p {
 }
 a::-moz-selection {
   background: #159BC8;
-  color: #fff;
+  color: #ecf8ff;
 }
 a::selection {
   background: #159BC8;
-  color: #fff;
+  color: #ecf8ff;
 }
 a::-moz-selection {
   background: #159BC8;
-  color: #fff;
+  color: #ecf8ff;
 }
 @media (prefers-color-scheme: dark) {
   ::-moz-selection {
     background: #FFDB09;
-    color: #262626;
+    color: #202b3a;
   }
   ::selection {
     background: #FFDB09;
-    color: #262626;
+    color: #202b3a;
   }
   ::-moz-selection {
     background: #FFDB09;
-    color: #262626;
+    color: #202b3a;
   }
   a {
-    color: #fff;
+    color: #ecf8ff;
   }
   a:hover,
   a:active {
-    color: #fff;
+    color: #ecf8ff;
   }
   a:focus {
-    color: #262626;
+    color: #202b3a;
   }
 }
 h1,
@@ -166,32 +169,43 @@ abbr {
 }
 .container {
   margin: 0 auto;
-  max-width: 1280px;
-  padding: 0 1rem;
+  max-width: 80ch;
+  padding: 0 2rem;
 }
 .main-content {
   padding: clamp(32px, 5vw, 48px) 0;
 }
 .main-content > .container > * {
-  max-width: 700px;
+  max-width: 80ch;
 }
 .main-content > .container > *:last-child {
   margin-bottom: 0;
 }
 .footer {
-  background-color: #e2e0e0;
+  background-color: #d9edf3;
   clear: both;
   display: block;
-  padding: clamp(16px, 2.5vw, 32px) 0;
   width: 100%;
 }
 @media (prefers-color-scheme: dark) {
   .footer {
-    background-color: #222;
+    background-color: #2b3647;
+  }
+}
+.footer__top {
+  padding: clamp(16px, 2.5vw, 32px) 0;
+}
+.footer__bottom {
+  background-color: #cfe1e7;
+  padding: clamp(16px, 2.5vw, 32px) 0;
+}
+@media (prefers-color-scheme: dark) {
+  .footer__bottom {
+    background-color: #202b3a;
   }
 }
 .header {
-  border-bottom: 1px solid #e2e0e0;
+  border-bottom: 1px solid #d9edf3;
   clear: both;
   display: block;
   padding: clamp(16px, 2.5vw, 32px) 0;

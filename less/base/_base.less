@@ -1,4 +1,8 @@
-html {font-size: 16px;}
+html {
+	background-color: @white;
+	font-size: 16px;
+	@media (prefers-color-scheme: dark) {background: @grey;}
+}
 body {
 	font-family: @body;
 	font-size: 16px;
@@ -6,8 +10,5 @@ body {
 	color:@text;
 	line-height:1.7em;
 	margin: 0;
-}
-@media (prefers-color-scheme: dark) {
-	html {background: @text;}
-	body {color: @white;}
+	@media (prefers-color-scheme: dark) {color: @white;}
 }
