@@ -1,0 +1,7 @@
+$sidebar-width: clamp(200px, 20%, 300px);
+
+.sidebar {
+  background-color: var(--bg-2);
+  flex: 1 1 $sidebar-width;
+  padding: 2rem;
+}

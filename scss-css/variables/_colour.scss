@@ -1,0 +1,27 @@
+:root {
+  --bg-1: #CED7DE;
+  --bg-2: #C9D4DC;
+  --bg-3: #C7D1D8;
+  --bg-4: #C1CDD6;
+
+  --white: #fff;
+  
+  --link: #117DA2;
+  --link--hover: #FFDB09;
+  --link--selection: #fff;
+  --text: #000;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-1: #445664;
+    --bg-2: #364753;
+    --bg-3: #2F3B44;
+    --bg-4: #212B33;
+
+    --white: #fff;
+    
+    --link: #159BC8;
+    --link--selection: #000;
+    --text: #fff;
+  }
+}

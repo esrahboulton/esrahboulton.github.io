@@ -1,0 +1,11 @@
+.footer {
+	background-color: var(--bg-3);
+	clear: both;
+	display: block;
+	width: 100%;
+	&__top {padding: clamp(16px,2.5vw,32px) 0;}
+	&__bottom {
+		background-color: var(--bg-4);
+		padding: clamp(16px,2.5vw,32px) 0;
+	}
+}

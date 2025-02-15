@@ -1,22 +1,22 @@
 *:focus {
-	background: @link-hover;
-	border-color: @link-hover;
-	color: @text;
-	outline: max(2px,0.25rem) solid @link-color;
+	background: var(--link--hover);
+	border-color: var(--link--hover);
+	color: #000;
+	outline: max(2px,0.25rem) solid var(--link);
 	outline-offset: 4px;
 }
 
 a {
 	background-color: transparent;
-	color:@text;
+	color:var(--text);
 	position: relative;
 	text-decoration: underline;
 	text-decoration-thickness: max(2px,0.25rem);
-	text-decoration-color: @link-color;
-	.transition(~"background-color 0.2s, color 0.2s" ease-in-out);
+	text-decoration-color: var(--link);
+  transition: background-color 0.2s, color 0.2s ease-in-out;
 	&:hover,
 	&:active {
-		color: @text;
+		color: var(--text);
 		text-decoration-thickness: max(4px,0.35rem);
 	}
 }
@@ -27,31 +27,21 @@ p {
 	margin: 0 0 2rem 0;
 }
 
-::selection {background: @link-hover;}
-::-moz-selection {background: @link-hover;}
+::selection {
+	background: var(--link--hover);
+	color: #000;
+}
+::-moz-selection {
+	background: var(--link--hover);
+	color: #000;
+}
 a::selection {
-	background: @link-color;
-	color:@white;
+	background: var(--link);
+	color:var(--link--selection);
 }
 a::-moz-selection {
-	background: @link-color;
-	color:@white;
-}
-@media (prefers-color-scheme: dark) {
-	::selection {
-		background: @link-hover;
-		color: @text;
-	}
-	::-moz-selection {
-		background: @link-hover;
-		color: @text;
-	}
-	a {
-		color: @white;
-		&:hover,
-		&:active {color: @white;}
-		&:focus {color: @text;}
-	}
+	background: var(--link);
+	color:var(--link--selection);
 }
 
 h1, .h1 {
@@ -87,4 +77,17 @@ h6, .h6 {
 
 abbr {
 	cursor: help;
+}
+
+.site-title {
+  &__title {
+    font-size: 1.5rem;
+	  font-weight: 400;
+	  margin: 0;
+  }
+  &__subtitle {
+    font-size: 0.875rem;
+	  font-weight: 400;
+    margin: 0;
+  }
 }
